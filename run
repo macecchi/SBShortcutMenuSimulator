@@ -1,0 +1,3 @@
+xcrun simctl spawn booted launchctl debug system/com.apple.SpringBoard --environment DYLD_INSERT_LIBRARIES=$PWD/SBShortcutMenuSimulator.dylib\
+&& xcrun simctl spawn booted launchctl stop com.apple.SpringBoard\\
+echo "Done. Run \"echo 'com.apple.mobilecal' | nc 127.0.0.1 8000\" to test 3d touch"
